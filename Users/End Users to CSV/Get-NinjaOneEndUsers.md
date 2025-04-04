@@ -7,17 +7,11 @@
 
 ## 📝 Description
 
-This script connects to the NinjaOne API, retrieves a full list of **End Users**, enriches the data with organization names, and exports the result to a CSV file. It supports token-based authentication using the **Client Credentials** flow and includes pagination for large datasets.
+This script connects to the NinjaOne API, retrieves a full list of **End Users**, enriches the data with organization names, and exports the result to a CSV file.
 
----
+## What Does It Look Like?
 
-## ✅ Prerequisites
-
-Before using this script, ensure you have:
-
-1. A **NinjaOne API Client ID and Client Secret**.
-2. API scopes set to `monitoring` and `management`.
-3. Access to the **NinjaOne Administration Panel** to generate your credentials.
+![Screenshot of CSV](https://raw.githubusercontent.com/gavsto/NinjaOne-API-Examples/refs/heads/main/Users/End%20Users%20to%20CSV/Ninja_End_User_CSV_Export.png.png)
 
 ### Steps to Generate API Credentials:
 
