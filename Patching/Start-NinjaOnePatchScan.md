@@ -1,7 +1,7 @@
 # Start-NinjaOnePatchScan.ps1
 
 ## Overview
-This script triggers an API patch scan for a specified Windows device within the NinjaOne platform. It automates the process of initiating a patch scan, ensuring that the device's software is up-to-date and secure.
+This script triggers an OS Patch Scan for a specified Windows device within the NinjaOne platform. It automates the process of initiating an OS Patch scan. Note this does not apply OS patches, just initiates a scan.
 
 ## Equivalent in Ninja
 ![Screenshot of Ninja Patch Scan](https://github.com/gavsto/NinjaOne-API-Examples/raw/main/Patching/Screenshot_Ninja_Patch_Scan.png)
@@ -16,8 +16,6 @@ This script triggers an API patch scan for a specified Windows device within the
   - `NinjaOneClientId`
   - `NinjaOneClientSecret`
 - **NinjaOne Instance URL:** e.g., `eu.ninjarmm.com`
-- **PowerShell Environment:** Ensure that PowerShell is installed on the system.
-- **Permissions:** Appropriate permissions to access the NinjaOne API and initiate patch scans.
 
 ## How It Works
 1. **Authentication:** The script authenticates with the NinjaOne API using the provided client ID and client secret. It obtains an access token, which is used for subsequent API requests.
@@ -25,8 +23,8 @@ This script triggers an API patch scan for a specified Windows device within the
 
 ## Usage
 1. **Set User Variables:**
-   - Open the script in a text editor.
-   - Replace the placeholder values with your actual NinjaOne instance, client ID, client secret, and the device ID you wish to scan:
+   - Open the script in an appropriate editor like Visual Studio Code or PowerShell ISE.
+   - Replace the placeholder values with your actual NinjaOne instance, client ID, client secret, and the device ID you wish to initiate the OS patch scan on:
 
      ```powershell
      $NinjaOneInstance = 'your_ninjaone_instance' # e.g., 'eu.ninjarmm.com'
@@ -44,11 +42,11 @@ This script triggers an API patch scan for a specified Windows device within the
      ```
 
 ### Expected Output
-Upon successful execution, the script will connect to the NinjaOne API and trigger a patch scan for the specified device. If the operation is successful, there may not be any output; otherwise, error messages will be displayed.
+Upon successful execution, the script will connect to the NinjaOne API and trigger an OS patch scan for the specified device.
 
 ### Troubleshooting
 - **Issue:** Authentication fails with an error message.
-  - **Solution:** Verify that the `NinjaOneClientId` and `NinjaOneClientSecret` are correct and have the necessary permissions.
+  - **Solution:** Verify that the `NinjaOneClientId` and `NinjaOneClientSecret` are correct
 
 - **Issue:** The script cannot connect to the NinjaOne API.
   - **Solution:** Ensure that the `NinjaOneInstance` URL is correct and accessible from your network.
@@ -59,4 +57,3 @@ Upon successful execution, the script will connect to the NinjaOne API and trigg
 ## Notes
 - Ensure that your NinjaOne API credentials are kept secure and not shared.
 - The script is designed for Windows devices managed within NinjaOne.
-- Regularly updating and reviewing scripts is recommended to maintain compatibility with API changes.
