@@ -3,6 +3,9 @@
 ## Overview
 This script triggers an API patch scan for a specified Windows device within the NinjaOne platform. It automates the process of initiating a patch scan, ensuring that the device's software is up-to-date and secure.
 
+## Equivalent in Ninja
+![Screenshot](./Screenshot_Ninja_Patch_Scan.png)
+
 ## Attribution
 - **Author:** Gavin Stone (NinjaOne)
 - **Attribution:** Luke Whitelock (NinjaOne) for his work on the Authentication Functions
