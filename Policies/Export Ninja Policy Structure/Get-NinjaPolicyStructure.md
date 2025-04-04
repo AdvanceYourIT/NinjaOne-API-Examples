@@ -2,7 +2,11 @@
 
 ## 📝 Overview
 
-This PowerShell script connects to the NinjaOne API to retrieve and display the policy structure of your NinjaOne environment. It provides an overview of each policy, including the number of devices assigned and any devices with policy overrides (referred to as "snowflake" devices). The output is presented in an interactive HTML file and also printed to the console.
+This PowerShell script connects to the NinjaOne API to retrieve and display the policy structure of your NinjaOne environment. It provides an overview of each policy, including the number of devices assigned and any devices with policy overrides. The output is presented in an interactive HTML file.
+
+## What Does It Look Like
+This generates an interactive HTML report which outlines all the policy classes, all parent/child policies and any Device Overrides that have been set
+![Screenshot of Ninja Patch Scan](https://raw.githubusercontent.com/gavsto/NinjaOne-API-Examples/refs/heads/main/Policies/Export%20Ninja%20Policy%20Structure/Ninja_Export_Policy_Structure.png)
 
 ## 🏷️ Attribution
 
@@ -16,12 +20,6 @@ This PowerShell script connects to the NinjaOne API to retrieve and display the 
   - `NinjaOneInstance`: Your NinjaOne instance URL (e.g., `app.ninjarmm.com`, `us2.ninjarmm.com`, `eu.ninjarmm.com`, `ca.ninjarmm.com`, `oc.ninjarmm.com`)
   - `NinjaOneClientId`: Your NinjaOne API Client ID
   - `NinjaOneClientSecret`: Your NinjaOne API Client Secret
-- **PowerShell Environment:** 
-  - PowerShell 5.1 or later
-- **Permissions:** 
-  - Administrator privileges to execute the script
-- **Internet Access:** 
-  - Required to connect to the NinjaOne API
 
 ## ⚙️ How It Works
 
@@ -31,17 +29,16 @@ This PowerShell script connects to the NinjaOne API to retrieve and display the 
 
 2. **Data Retrieval:** 
    - After successful authentication, the script queries the NinjaOne API to gather information about the policy structure.
-   - It retrieves details about each policy, including assigned devices and any devices with policy overrides ("snowflake" devices).
+   - It retrieves details about each policy, including assigned devices and any devices with policy overrides.
 
 3. **Output Generation:** 
    - The script generates an interactive HTML report detailing the policy hierarchy, device assignments, and policy overrides.
    - This report is saved to `C:\Temp\NinjaOnePolicyOutput_<timestamp>.html`.
-   - The same information is also printed to the console for immediate viewing.
 
 ## 🚀 Usage
 
 1. **Set User Variables:** 
-   - Open the script in a text editor.
+   - Open the script.
    - Locate the user-editable variables section and set the following:
      ```powershell
      $NinjaOneInstance = 'your_ninjaone_instance'
@@ -58,7 +55,6 @@ This PowerShell script connects to the NinjaOne API to retrieve and display the 
      ```
 
 3. **View the Output:** 
-   - Upon execution, the script will print the policy structure to the console.
    - An interactive HTML report will be generated and saved to `C:\Temp\NinjaOnePolicyOutput_<timestamp>.html`.
    - Open this HTML file in a web browser to explore the policy structure interactively.
 
@@ -86,6 +82,3 @@ This PowerShell script connects to the NinjaOne API to retrieve and display the 
 
 - **Customization:** 
   - The script can be modified to change the output format or to include additional data as needed. Ensure you understand the script's functionality before making changes.
-
-- **Support:** 
-  - For assistance or to report issues, refer to the source repository or contact NinjaOne support.
